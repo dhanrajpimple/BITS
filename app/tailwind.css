@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+
+.top-shadow {
+  position: relative;
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.custom-border {
+  border-width: 0px 3px 3px 3px; /* Top: 0px, Right: 3px, Bottom: 3px, Left: 3px */
+  border-style: solid;
+  border-image-source: linear-gradient(
+    90deg, 
+    rgba(43, 1, 116, 0.8) 0%, 
+    rgba(101, 45, 171, 0.8) 45.6%, 
+    rgba(255, 255, 255, 0.8) 79.6%
+  );
+  border-image-slice: 1;
+
+  /* ✅ Fix for visible rounded corners */
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-clip: padding-box; /* Ensures the background stays inside the border */
+  overflow: hidden; /* Prevents border from covering the radius */
+}
