@@ -2,13 +2,8 @@ import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-declare module "@remix-run/node" {
-  interface Future {
-    v3_singleFetch: true;
-  }
-}
-
 export default defineConfig({
+  cacheDir: './.vite-cache',
   plugins: [
     remix({
       future: {
@@ -19,6 +14,16 @@ export default defineConfig({
         v3_lazyRouteDiscovery: true,
       },
     }),
-    tsconfigPaths(),
+    tsconfigPaths({
+      projects: ["./tsconfig.json"],
+    }),
   ],
+  optimizeDeps: {
+    include: ["@remix-run/react", "@remix-run/node", "@remix-run/dev"],
+    exclude: ["@remix-run/react"],
+  },
+  esbuild: {
+    target: "esnext",
+    minify: true,
+  },
 });
