@@ -43,7 +43,7 @@ const Footer = () => {
           {/* Column 4 - Branding & Social Icons */}
           <div className="flex flex-col items-center md:items-end">
             <img src={logo} className="h-16 sm:h-20" alt="Company Logo" />
-            <div className="flex space-x-4 text-xl mt-6">
+            <div className="flex space-x-4 text-2xl mt-6">
               <a href="#" className="hover:text-gray-300"><FaFacebookF /></a>
               <a href="#" className="hover:text-gray-300"><FaTwitter /></a>
               <a href="#" className="hover:text-gray-300"><FaInstagram /></a>

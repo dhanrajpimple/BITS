@@ -14,7 +14,7 @@ const ContactForm = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 md:px-10 bg-black/60 flex flex-col md:flex-row items-center gap-10">
+      <div className="relative w-[90%] md:w-[95%] mx-auto px-6 sm:px-8 md:px-10 bg-black/60 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side Text */}
         <div className="w-full md:w-1/2 text-center md:text-left">
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold text-center leading-tight bg-gradient-to-r from-white via-[#7648ad] to-[#5c13b0] bg-clip-text text-transparent">
@@ -32,12 +32,12 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
-                placeholder="Last Name"
+                placeholder="First Name"
                 className="w-full px-4 py-3 rounded-md bg-transparent text-white border border-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
               />
               <input
                 type="text"
-                placeholder="First Name"
+                placeholder="Last Name"
                 className="w-full px-4 py-3 rounded-md bg-transparent text-white border border-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
               />
             </div>

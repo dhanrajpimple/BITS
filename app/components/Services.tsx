@@ -11,17 +11,17 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="py-16 bg-white text-center w-full">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 sm:py-16 bg-white text-center w-full">
+      <div className=" w-[90%] md:w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title with Divider */}
         <div className="flex items-center justify-center mb-8">
-          <div className="h-2 w-2 rounded-full bg-primary"></div>
-          <div className="h-[2px] w-16 sm:w-28 md:w-40 lg:w-64 bg-primary"></div>
+          <div className="hidden sm:block h-2 w-2 rounded-full bg-primary"></div>
+          <div className="hidden sm:block h-[2px] w-16 sm:w-28 md:w-40 lg:w-64 bg-primary"></div>
           <h2 className="text-2xl sm:text-3xl font-bold text-primary mx-4">
             Experts for Your Digital Workspace
           </h2>
-          <div className="h-[2px] w-16 sm:w-28 md:w-40 lg:w-64 bg-primary"></div>
-          <div className="h-2 w-2 rounded-full bg-primary"></div>
+          <div className="hidden sm:block h-[2px] w-16 sm:w-28 md:w-40 lg:w-64 bg-primary"></div>
+          <div className="hidden sm:block h-2 w-2 rounded-full bg-primary"></div>
         </div>
 
         {/* Subtitle */}

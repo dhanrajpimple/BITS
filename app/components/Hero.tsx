@@ -48,7 +48,7 @@ export default function Hero() {
   return (
     <div className="flex flex-col items-center justify-center bg-white py-6 sm:py-12 w-full">
       {/* Slider Container */}
-      <div className="relative w-full max-w-[90%]  md:max-w-7xl h-[200px] sm:h-[200px] md:h-[300px] lg:h-[350px] rounded-3xl  overflow-hidden shadow-xl">
+      <div className="relative w-[90%] md:w-[95%]  h-[200px] sm:h-[200px] md:h-[300px] lg:h-[350px] rounded-3xl  overflow-hidden shadow-xl">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center transition-all duration-700"
@@ -58,20 +58,20 @@ export default function Hero() {
         </div>
 
         {/* Text Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 h-full w-full">
+        <div className="relative z-10 flex flex-col items-center justify-center gap-3 md:gap-10 text-center px-6 h-full w-full">
           <h2
-            className="text-xl sm:text-4xl md:text-5xl font-bold"
+            className="text-xl sm:text-2xl md:text-5xl font-bold"
             style={{ color: slides[currentIndex].color }}
           >
             {slides[currentIndex].heading}
           </h2>
           <p
-            className="mt-3 text-sm sm:text-base md:text-lg font-light "
+            className=" text-sm sm:text-base md:text-lg font-light "
             style={{ color: slides[currentIndex].color }}
           >
             {slides[currentIndex].subText}
           </p>
-          <button className="mt-6 px-6 py-1 sm:py-3 bg-primary hover:bg-purple-700 text-white font-semibold rounded-full transition">
+          <button className=" px-6 py-1 sm:py-3 bg-primary hover:bg-purple-700 text-white font-semibold rounded-full transition">
             Get Started Today
           </button>
         </div>

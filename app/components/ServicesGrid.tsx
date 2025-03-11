@@ -21,17 +21,17 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <div className="py-16 bg-white w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-8 sm:py-16 bg-white w-full">
+      <div className="w-[90%] md:w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title with Dividers */}
         <div className="flex items-center justify-center mb-10">
-          <div className="h-2 w-2 rounded-full bg-primary"></div>
-          <div className="h-[2px] w-16 sm:w-24 md:w-32 lg:w-48 bg-primary"></div>
+          <div className="hidden sm:block h-2 w-2 rounded-full bg-primary"></div>
+          <div className="hidden sm:block h-[2px] w-16 sm:w-24 md:w-32 lg:w-48 bg-primary"></div>
           <h2 className="text-2xl sm:text-3xl font-bold text-primary mx-4 text-center">
             THE BITS Professional Services Offerings
           </h2>
-          <div className="h-[2px] w-16 sm:w-24 md:w-32 lg:w-48 bg-primary"></div>
-          <div className="h-2 w-2 rounded-full bg-primary"></div>
+          <div className="hidden sm:block h-[2px] w-16 sm:w-24 md:w-32 lg:w-48 bg-primary"></div>
+          <div className="hidden sm:block h-2 w-2 rounded-full bg-primary"></div>
         </div>
 
         {/* Services Grid */}
@@ -53,8 +53,10 @@ const ServicesGrid = () => {
         </div>
       
         {/* Overlay with Title */}
-        <div className="absolute inset-x-0 bottom-0 h-[30%] bg-black/80 text-white text-lg font-semibold text-center py-3">
+        <div className="absolute inset-x-0 bottom-0 h-[25%] bg-black/80 text-white text-lg  font-normal">
+        <div className="w-full h-full px-4 flex justify-center items-center text-center">
           {service.title}
+        </div>
         </div>
       </div>
           ))}
