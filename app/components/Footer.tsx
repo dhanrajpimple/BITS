@@ -1,12 +1,13 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import logo from "../assests/footer_logo.png"
+import logo from "../assests/footer_logo.png";
+
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white py-12">
-      <div className="min-w-full mx-auto  items-center align-middle flex flex-col">
+    <footer className="bg-primary text-white pt-12">
+      <div className="w-full mx-auto flex flex-col">
         {/* Top Section */}
-        <div className="grid w-full px-20 items-start grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <div className="grid w-full px-6 sm:px-10 lg:px-20 items-start grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
           {/* Column 1 - Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -40,9 +41,9 @@ const Footer = () => {
           </div>
 
           {/* Column 4 - Branding & Social Icons */}
-          <div className="flex flex-col items-center  md:items-end">
-           <img src ={logo} className="h-20"/>
-            <div className="flex space-x-4 text-xl mt-10">
+          <div className="flex flex-col items-center md:items-end">
+            <img src={logo} className="h-16 sm:h-20" alt="Company Logo" />
+            <div className="flex space-x-4 text-xl mt-6">
               <a href="#" className="hover:text-gray-300"><FaFacebookF /></a>
               <a href="#" className="hover:text-gray-300"><FaTwitter /></a>
               <a href="#" className="hover:text-gray-300"><FaInstagram /></a>
@@ -52,11 +53,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 text-center text-sm top-shadow py-4 min-w-full">
-  © 2025 THE BITS. All rights reserved.
-</div>
-
-
+        <div className="mt-12 text-center top-shadow  text-sm py-4 w-full">
+          © 2025 THE BITS. All rights reserved.
+        </div>
       </div>
     </footer>
   );

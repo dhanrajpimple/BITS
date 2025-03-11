@@ -19,19 +19,23 @@ body {
 }
 
 .custom-border {
-  border-width: 0px 3px 3px 3px; /* Top: 0px, Right: 3px, Bottom: 3px, Left: 3px */
+  border-width: 0px 0.5px 1px 0.5px; /* Top: 0px, Right: 3px, Bottom: 3px, Left: 3px */
   border-style: solid;
-  border-image-source: linear-gradient(
-    90deg, 
-    rgba(43, 1, 116, 0.8) 0%, 
-    rgba(101, 45, 171, 0.8) 45.6%, 
-    rgba(255, 255, 255, 0.8) 79.6%
-  );
-  border-image-slice: 1;
+ border-color: blue;
 
   /* ✅ Fix for visible rounded corners */
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   background-clip: padding-box; /* Ensures the background stays inside the border */
   overflow: hidden; /* Prevents border from covering the radius */
+}
+
+
+.gradient-text {
+  background: linear-gradient(89.29deg, #FFFFFF 49.86%, #440099 100.92%, #440099 104.63%),
+              linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
 }

@@ -1,8 +1,9 @@
 import React from "react";
-import contactbg from '../assests/contactus.png'
+import contactbg from '../assests/contactus.png';
+
 const ContactForm = () => {
   return (
-    <div className="relative bg-black text-white py-16">
+    <div className="relative bg-black text-white py-16 mb-8">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -10,23 +11,23 @@ const ContactForm = () => {
           alt="Background"
           className="w-full h-full object-cover"
         />
-      
       </div>
 
       {/* Content Container */}
-      <div className="relative max-w-7xl  bg-black/60 mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 md:px-10 bg-black/60 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side Text */}
-        <div className="w-full md:w-1/2">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Get in <span className="text-purple-500">touch</span>
-          </h2>
-          <p className="mt-4 text-lg text-gray-300">
+        <div className="w-full md:w-1/2 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold text-center leading-tight bg-gradient-to-r from-white via-[#7648ad] to-[#5c13b0] bg-clip-text text-transparent">
+  Get in touch
+</h2>
+
+          <p className="mt-4 text-lg text-gray-300 text-center">
             Reach out, and let's create a universe of possibilities together!
           </p>
         </div>
 
         {/* Right Side Form */}
-        <div className="w-full md:w-1/2  p-6 md:p-8 rounded-lg">
+        <div className="w-full md:w-1/2 min-w-[320px] p-6 md:p-8 rounded-lg">
           <form className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
