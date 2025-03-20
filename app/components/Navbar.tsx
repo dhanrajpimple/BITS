@@ -20,7 +20,7 @@ const Navbar = () => {
               (item) => (
                 <a
                   key={item}
-                  href="#"
+                  href={item == "Home" ? "/" : `${item.toLowerCase()}`}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
                   {item}
@@ -61,7 +61,7 @@ const Navbar = () => {
               (item) => (
                 <a
                   key={item}
-                  href="#"
+                  href={item == "Home" ? "/" : `${item.toLowerCase()}`}
                   className="block text-gray-700 hover:text-purple-700 text-lg transition"
                 >
                   {item}
