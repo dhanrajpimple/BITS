@@ -1,13 +1,19 @@
 import React from "react";
 import contactbg from '../assests/contactus.png';
 
-const ContactForm = () => {
+
+interface ContactFormProps {
+  bgimage?: string;
+}  
+
+
+const ContactForm: React.FC<ContactFormProps> = ({ bgimage = contactbg }) => {
   return (
     <div className="relative bg-black text-white py-16 mb-8">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={contactbg}
+          src={bgimage}
           alt="Background"
           className="w-full h-full object-cover"
         />

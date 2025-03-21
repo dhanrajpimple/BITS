@@ -63,7 +63,14 @@ const solutionData: Solution[] = [
     subtitle: "The Best Choice for Security Solution",
     description:
       "Modernize Your Network with Industry-Leading networking products & THE BITS IT Expertise",
-    List: ["Next Generation Firewalls", "EDR/MDR", "MFA/IAM", "PAM", "SASE", "Cloud Security"],
+    List: [
+      "Next Generation Firewalls",
+      "EDR/MDR",
+      "MFA/IAM",
+      "PAM",
+      "SASE",
+      "Cloud Security",
+    ],
   },
   {
     image: cloud,
@@ -84,7 +91,7 @@ const solutionData: Solution[] = [
 
 const SolutionsList: React.FC = () => {
   return (
-    <div className="mx-auto w-full px-5 sm:px-16">
+    <div className="mx-auto w-full px-4 sm:px-16">
       {solutionData.map((solution, i) => {
         // Split the bullet list into two columns
         const half = Math.ceil(solution.List.length / 2);
@@ -92,19 +99,21 @@ const SolutionsList: React.FC = () => {
         const rightList = solution.List.slice(half);
 
         return (
-          <div key={i} className=" pt-8 mb-8 flex flex-col gap-4 min-w-full">
+          <div key={i} className="pt-8 mb-8 flex flex-col gap-4">
             {/* Title, Subtitle, and Image in a Responsive Flex Container */}
-            <div className="flex md:h-40 flex-col  md:flex-row gap-4 items-start bg-[#F0F0F0] rounded-3xl">
+            <div className="flex flex-col md:flex-row gap-4 items-start bg-[#F0F0F0] rounded-3xl p-4 md:p-0 md:h-40">
               {/* Responsive Image */}
               <img
                 src={solution.image}
                 alt={solution.title}
-                className="w-full md:w-36 md:h-full rounded-md"
+                className="w-full md:w-44 h-full rounded-md object-cover"
               />
 
               {/* Text Section */}
               <div className="w-full md:w-2/3 py-2">
-                <h2 className="mb-1 text-2xl font-bold text-[#440099]">{solution.title}</h2>
+                <h2 className="mb-1 text-xl sm:text-2xl md:text-2xl font-bold text-[#440099]">
+                  {solution.title}
+                </h2>
 
                 {/* Horizontal line & Dot */}
                 <div className="flex flex-row items-center my-1 space-x-1">
@@ -112,25 +121,27 @@ const SolutionsList: React.FC = () => {
                   <div className="h-[5px] w-[5px] rounded-full bg-[#440099]" />
                 </div>
 
-                <h3 className="mb-4 text-lg font-semibold text-gray-800">
+                <h3 className="mb-4 text-base sm:text-lg md:text-lg font-semibold text-gray-800">
                   {solution.subtitle}
                 </h3>
 
                 {/* Description */}
-                <p className="mb-6 text-gray-700">{solution.description}</p>
+                <p className="mb-6 text-sm sm:text-base text-gray-700">
+                  {solution.description}
+                </p>
               </div>
             </div>
 
-            {/* 2-Column Bullet List (already responsive) */}
+            {/* 2-Column Bullet List */}
             <div className="grid grid-cols-1 sm:grid-cols-2 pl-6 mt-3">
-              <ul className="list-disc list-inside text-[#440099]">
+              <ul className="list-disc list-inside text-[#440099] text-md">
                 {leftList.map((item, idx) => (
                   <li key={idx} className="mb-2">
                     {item}
                   </li>
                 ))}
               </ul>
-              <ul className="list-disc list-inside text-[#440099]">
+              <ul className="list-disc list-inside text-[#440099] text-md">
                 {rightList.map((item, idx) => (
                   <li key={idx} className="mb-2">
                     {item}

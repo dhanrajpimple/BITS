@@ -13,6 +13,9 @@ import vdi from "~/assests/vid.jpeg";
 import farewalls from "~/assests/firewalls.jpeg";
 import backup from "~/assests/backup.jpeg";
 import cloudinfra from "~/assests/cloudinfa.jpeg";
+import ContactForm from '~/components/ContactForm';
+import contactbg1 from "~/assests/servicecontactbg1.jpeg";
+import contactbg2 from "~/assests/servicecontactbg2.jpeg";
 
 // Default category data for Managed Security
 const SecurityData = [
@@ -24,7 +27,9 @@ const SecurityData = [
 const ServiceList = () => {
   // State for selected service items with default set to SecurityData
   const [selected, setSelected] = useState<{ title: string; image: string }[]>(SecurityData);
-  
+  // State for active category selection
+  const [activeCategory, setActiveCategory] = useState("Managed Security");
+
   // Main navigation for service categories
   const select = [
     { id: 1, name: "Managed Security", image: security },
@@ -47,8 +52,9 @@ const ServiceList = () => {
     { title: "MDR (Managed Detection and Response)", image: mdr },
   ];
 
-  // Update the selected array based on clicked category
+  // Update the selected array and active category based on clicked category
   const handleClick = (title: string) => {
+    setActiveCategory(title);
     if (title === "Managed Security") {
       setSelected(SecurityData);
     } else if (title === "Manage Infrastructure") {
@@ -61,11 +67,12 @@ const ServiceList = () => {
   return (
     <>
       {/* Service Category Selection */}
-      <div className="flex w-full justify-center gap-8 flex-wrap px-4">
+      <div className="flex w-full justify-center gap-4 md:gap-8 flex-wrap px-4 sm:px-6">
         {select.map((serviceItem, index) => (
           <div
             key={index}
-            className="relative rounded-lg overflow-hidden w-60 h-48 cursor-pointer shadow-lg mb-4"
+            className={`relative rounded-lg overflow-hidden w-56 sm:w-60 h-44 sm:h-48 cursor-pointer shadow-lg mb-4 
+              ${activeCategory === serviceItem.name ? "border-4 border-blue-500" : ""}`}
             onClick={() => handleClick(serviceItem.name)}
           >
             {/* Image Container with fixed aspect ratio */}
@@ -79,9 +86,16 @@ const ServiceList = () => {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
+              {/* Overlay for non-selected card */}
+              {activeCategory !== serviceItem.name && (
+                <div className="absolute inset-0 bg-gray-400 opacity-50"></div>
+              )}
             </div>
             {/* Overlay with Title */}
-            <div className="absolute inset-x-0 bottom-0 h-[25%] bg-black/80 flex justify-center items-center text-white text-lg font-normal">
+            <div
+              className={`absolute inset-x-0 bottom-0 h-[25%] flex justify-center items-center text-white text-lg font-normal 
+              ${activeCategory === serviceItem.name ? "bg-[#440099]/80" : "bg-black/80"}`}
+            >
               {serviceItem.name}
             </div>
           </div>
@@ -89,21 +103,24 @@ const ServiceList = () => {
       </div>
 
       {/* Display Selected Items */}
-      <div className="flex flex-col">
+      <div className="flex flex-col px-4 md:px-20 gap-5 my-5">
         {selected.map((item, idx) => (
           <div
             key={idx}
-            className="relative flex items-center h-20 overflow-hidden shadow-lg bg-gradient-to-r from-[#F0F0F0] to-[#FFFFFF] rounded-l-full p-4"
+            className="relative flex items-center h-20 overflow-hidden bg-gradient-to-r from-[#F0F0F0] to-[#FFFFFF] rounded-l-full"
           >
             <img
               src={item.image}
               alt={item.title}
-              className="min-h-full w-24 rounded-tr-full"
+              className="min-h-full w-20 sm:w-24 rounded-t-full rounded-bl-full object-cover"
             />
-            <p className="text-black ml-4">{item.title}</p>
+            <p className="text-[#440099] ml-4 text-sm font-bold sm:text-lg">{item.title}</p>
           </div>
         ))}
       </div>
+
+      {/* Contact Form with responsive background image based on category */}
+      <ContactForm bgimage={activeCategory === "Managed Security" ? contactbg1 : contactbg2} />
     </>
   );
 };

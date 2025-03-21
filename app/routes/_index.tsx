@@ -6,7 +6,7 @@ import Navbar from "~/components/Navbar";
 import Services from "~/components/Services";
 import ServicesGrid from "~/components/ServicesGrid";
 import TransformationJourney from "~/components/TransformationJourney";
-
+import contactbg from "~/assests/contactus.png"
 export const meta: MetaFunction = () => {
   return [
     { title: "BITS" },
@@ -24,7 +24,7 @@ export default function Index() {
    <ServicesGrid/>
   
   
-   <ContactForm/>
+   <ContactForm bgimage = {contactbg}/>
    <Footer/>
    </div>
   );

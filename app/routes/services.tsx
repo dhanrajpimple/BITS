@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactForm from '~/components/ContactForm'
+
 import Footer from '~/components/Footer'
 import Navbar from '~/components/Navbar'
 import ServiceHero from '~/components/ServiceHero'
@@ -11,7 +11,7 @@ const services = () => {
         <Navbar/>
         <ServiceHero/>
         <ServiceList/>
-        <ContactForm/>
+    
         <Footer/>
     </div>
   )

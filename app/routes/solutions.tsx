@@ -4,14 +4,14 @@ import Footer from '~/components/Footer'
 import Navbar from '~/components/Navbar'
 import SolutionsHero from '~/components/SolutionsHero'
 import SolutionsList from '~/components/SolutionsList'
-
+import contactbg from "~/assests/solutioncontactbg.jpeg"
 const solutions = () => {
   return (
     <div className='bg-white'>
         <Navbar/>
         <SolutionsHero/>
         <SolutionsList/>
-        <ContactForm/>
+        <ContactForm bgimage={contactbg}/>
         <Footer/>
     </div>
   )
