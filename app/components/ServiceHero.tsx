@@ -14,10 +14,10 @@ const ServiceHero = () => {
         }}
       >
         {/* Blue overlay */}
-        <div className="absolute inset-0 bg-blue-500 opacity-50 rounded-3xl"></div>
+        <div className="absolute inset-0 bg-[#440099] opacity-65 rounded-3xl"></div>
 
         {/* Content placed above the overlay */}
-        <div className="relative z-10">
+        <div className="relative z-10 flex flex-col gap-4">
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
             The Bits - Services
           </h1>

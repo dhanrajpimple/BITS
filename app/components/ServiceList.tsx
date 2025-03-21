@@ -72,7 +72,7 @@ const ServiceList = () => {
           <div
             key={index}
             className={`relative rounded-lg overflow-hidden w-56 sm:w-60 h-44 sm:h-48 cursor-pointer shadow-lg mb-4 
-              ${activeCategory === serviceItem.name ? "border-4 border-blue-500" : ""}`}
+              ${activeCategory === serviceItem.name ? "border-2 border-[#440099]" : ""}`}
             onClick={() => handleClick(serviceItem.name)}
           >
             {/* Image Container with fixed aspect ratio */}
