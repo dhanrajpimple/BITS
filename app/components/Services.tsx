@@ -4,7 +4,7 @@ import asset from "../assests/assests.png";
 
 export default function Services() {
   return (
-    <div className="py-8 sm:py-16 bg-white text-center w-full">
+    <div className="py-8  bg-white text-center w-full">
       <div className=" w-[90%] md:w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title with Divider */}
         <div className="flex items-center justify-center mb-8">
@@ -18,14 +18,14 @@ export default function Services() {
         </div>
 
         {/* Subtitle */}
-        <p className="text-gray-600 max-w-3xl mx-auto mb-8 text-sm sm:text-base md:text-lg">
+        <p className="text-gray-600 max-w-3xl mx-auto  text-sm sm:text-base md:text-lg">
           We are a skilled team of developers and consultants focused on digital
           solutions. Our blend of creativity and technical know-how drives
           effective digital transformation for businesses.
         </p>
 
         {/* Services Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 p-4">
+        <div className="flex flex-wrap justify-center ">
   <img 
     src={asset} 
     alt="Responsive Asset"

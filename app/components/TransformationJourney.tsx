@@ -32,7 +32,7 @@ const steps = [
 
 export default function TransformationJourney() {
   return (
-    <div className="py-8 sm:py-16 bg-white">
+    <div className="pb-8  bg-white">
       <div className="w-[90%] md:w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl md:text-5xl font-bold text-black text-center mb-12">
           Your Transformation Journey
