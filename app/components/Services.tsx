@@ -1,13 +1,6 @@
 import React from "react";
+import asset from "../assests/assests.png";
 
-const services = [
-  "Communication Tech",
-  "Data",
-  "Internet Access",
-  "Software",
-  "Hardware",
-  "Transactions",
-];
 
 export default function Services() {
   return (
@@ -32,16 +25,14 @@ export default function Services() {
         </p>
 
         {/* Services Buttons */}
-        <div className="flex flex-wrap justify-center gap-4">
-          {services.map((service, index) => (
-            <button
-              key={index}
-              className="border border-black text-primary px-5 py-2 rounded-full text-sm sm:text-base font-medium hover:bg-purple-700 hover:text-white transition-all duration-300"
-            >
-              {service}
-            </button>
-          ))}
-        </div>
+        <div className="flex flex-wrap justify-center gap-4 p-4">
+  <img 
+    src={asset} 
+    alt="Responsive Asset"
+    className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain"
+  />
+</div>
+
       </div>
     </div>
   );

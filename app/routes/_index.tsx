@@ -2,6 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import ContactForm from "~/components/ContactForm";
 import Footer from "~/components/Footer";
 import Hero from "~/components/Hero";
+import Patners from "~/components/Patners";
 import Navbar from "~/components/Navbar";
 import Services from "~/components/Services";
 import ServicesGrid from "~/components/ServicesGrid";
@@ -23,7 +24,7 @@ export default function Index() {
    <TransformationJourney/>
    <ServicesGrid/>
   
-  
+    <Patners/>
    <ContactForm bgimage = {contactbg}/>
    <Footer/>
    </div>
